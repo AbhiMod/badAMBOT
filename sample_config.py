@@ -13,30 +13,30 @@ class Config(object):
     LOGGER = True
     # MUST NEEDED VARS
     # set this value with your name
-    ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+    ALIVE_NAME = os.environ.get("ALIVE_NAME", "𝓐𝓜𝓑𝓞𝓣")
     # Get the values for following 2 from my.telegram.org
     APP_ID = int(os.environ.get("APP_ID", 6))
     API_HASH = os.environ.get("API_HASH") or None
     # Datbase url heroku sets it automatically else get this from elephantsql
-    DB_URI = os.environ.get("DATABASE_URL", None)
+    DB_URI = os.environ.get("DATABASE_URL", "postgres://qetqzxzk:0ABx6as-9LLHTla3wd2FTZzIc2BihBPv@rain.db.elephantsql.com/qetqzxzk")
     # Get this value by running python3 stringsetup.py or https://repl.it/@sandeep1709/generatestringsession
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
     # Telegram BOT Token and bot username from @BotFather
     TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN") or os.environ.get(
         "TG_BOT_TOKEN_BF_HER", None
     )
-    TG_BOT_USERNAME = None
+    TG_BOT_USERNAME = "AMYT_ROBOT"
     # get this value from http://www.timezoneconverter.com/cgi-bin/findzone.tzc
     TZ = os.environ.get("TZ", "Asia/Kolkata")
     # set this with required cat repo link
     UPSTREAM_REPO = os.environ.get(
-        "UPSTREAM_REPO", "https://github.com/TgCatUB/catuserbot"
+        "UPSTREAM_REPO", "https://github.com/AMBOT-v1/badAMBOT"
     )
     # External plugins repo
     EXTERNAL_REPO = os.environ.get("EXTERNAL_REPO", None)
     if bool(EXTERNAL_REPO and (EXTERNAL_REPO.lower() != "false")):
         if not url(EXTERNAL_REPO):
-            EXTERNAL_REPO = "https://github.com/TgCatUB/CatPlugins"
+            EXTERNAL_REPO = "https://github.com/AMBOT-v1/CatPlugins"
     else:
         EXTERNAL_REPO = None
     # if you need badcat plugins use the following vars
@@ -49,9 +49,9 @@ class Config(object):
     # BASIC and MAIN CONFIG VARS
     # for profile default name
     # Set this value with group id of private group(can be found this value by .id)
-    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID") or 0)
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID","-1001629345060") or 0)
     # Set this value same as PRIVATE_GROUP_BOT_API_ID if you need pmgaurd
-    PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID") or 0)
+    PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID","-1001629345060") or 0)
     # Set this value for working of fban/unfban/superfban/superunfban cmd
     FBAN_GROUP_ID = int(os.environ.get("FBAN_GROUP_ID") or 0)
     # set this value with channel id of private channel use full for .frwd cmd
@@ -61,11 +61,11 @@ class Config(object):
     # set this with same app name you given for heroku
     HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
     # Owner id to show profile link of given id as owner
-    OWNER_ID = int(os.environ.get("OWNER_ID") or 0)
+    OWNER_ID = int(os.environ.get("OWNER_ID","6204761408") or 0)
     # set this with group id so it keeps notifying about your tagged messages or pms
     PM_LOGGER_GROUP_ID = int(
-        os.environ.get("PM_LOGGER_GROUP_ID")
-        or os.environ.get("PM_LOGGR_BOT_API_ID")
+        os.environ.get("PM_LOGGER_GROUP_ID","-1001629345060")
+        or os.environ.get("PM_LOGGR_BOT_API_ID","-1001629345060")
         or 0
     )
 
@@ -73,10 +73,10 @@ class Config(object):
     # set this will channel id of your custom plugins
     PLUGIN_CHANNEL = int(os.environ.get("PLUGIN_CHANNEL") or 0)
     # set this value with your required name for telegraph plugin
-    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "catuserbot")
+    TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "AMBOTUSERBOT")
     # for custom thumb image set this with your required thumb telegraoh link
     THUMB_IMAGE = os.environ.get(
-        "THUMB_IMAGE", "https://graph.org/file/ca95524e4734b0d5461b5.jpg"
+        "THUMB_IMAGE", "https://te.legra.ph/file/da8abad2893dfb7185568.jpg"
     )
     # specify NO_LOAD with plugin names for not loading in userbot
     NO_LOAD = list(os.environ.get("NO_LOAD", "").split())
@@ -96,21 +96,21 @@ class Config(object):
 
     # API VARS FOR USERBOT
     # Get your own ACCESS_KEY from http://api.screenshotlayer.com/api/capture for screen shot
-    SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", None)
+    SCREEN_SHOT_LAYER_ACCESS_KEY = os.environ.get("SCREEN_SHOT_LAYER_ACCESS_KEY", "fae0a07f01fadd865db3f5815ed72085")
     # Get your own APPID from https://api.openweathermap.org/data/2.5/weather
-    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
+    OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", "8953cab52ccecd69e4e2faad9085c801")
     # This is required for the speech to text plugin. Get your USERNAME from
     # https://console.bluemix.net/docs/services/speech-to-text/getting-started.html
     IBM_WATSON_CRED_URL = os.environ.get("IBM_WATSON_CRED_URL", None)
     IBM_WATSON_CRED_PASSWORD = os.environ.get("IBM_WATSON_CRED_PASSWORD", None)
     # Get free api from https://dashboard.ipdata.co/sign-up.html
-    IPDATA_API = os.environ.get("IPDATA_API", None)
+    IPDATA_API = os.environ.get("IPDATA_API", "c01fe2c30b4f7a7bf616eedbc128fe7e231d68d313919f7536f3d6e7")
     # Get a Free API Key from OCR.Space
-    OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
+    OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", "K85471018088957")
     # Genius lyrics get this value from https://genius.com/developers both has
-    GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", None)
+    GENIUS_API_TOKEN = os.environ.get("GENIUS_API_TOKEN", "drrenNhjjM8Dx469n2tg-TmRhauWfVITb4Hlqu5Yehy8Vi-scgnMxsNxgF67nOkh")
     # Get your own API key from https://www.remove.bg/
-    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
+    REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", "HWrTP2saLXTY7bQQZK6NxZHJ")
     # Get this value from https://free.currencyconverterapi.com/
     CURRENCY_API = os.environ.get("CURRENCY_API", None)
     # Google Drive plugin https://graph.org/G-Drive-guide-for-catuserbot-01-01
@@ -124,23 +124,23 @@ class Config(object):
     # JustWatch Country for watch plugin
     WATCH_COUNTRY = os.environ.get("WATCH_COUNTRY", "IN")
     # Last.fm plugin  https://graph.org/Guide-for-LASTFM-02-03
-    BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
-    LASTFM_API = os.environ.get("LASTFM_API", None)
-    LASTFM_SECRET = os.environ.get("LASTFM_SECRET", None)
-    LASTFM_USERNAME = os.environ.get("LASTFM_USERNAME", None)
-    LASTFM_PASSWORD = os.environ.get("LASTFM_PASSWORD", None)
+    BIO_PREFIX = os.environ.get("BIO_PREFIX", "It's All About You, Baby!")
+    LASTFM_API = os.environ.get("LASTFM_API", "95e12c0f156565704a4e186ad931b096")
+    LASTFM_SECRET = os.environ.get("LASTFM_SECRET", "d95f5180f26e7c183bb56814b4b8740b")
+    LASTFM_USERNAME = os.environ.get("LASTFM_USERNAME", "AMBOT12")
+    LASTFM_PASSWORD = os.environ.get("LASTFM_PASSWORD", "leyep46949@niback.com")
     # Open ai api // get from here: https://platform.openai.com/account/api-keys
-    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", None)
+    OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "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")
     # Spotify API for spotify.py // get from here :  https://developer.spotify.com/dashboard/login
-    SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID", None)
-    SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", None)
+    SPOTIFY_CLIENT_ID = os.environ.get("SPOTIFY_CLIENT_ID", "2a230af10e0a40638dc77c1febb47170")
+    SPOTIFY_CLIENT_SECRET = os.environ.get("SPOTIFY_CLIENT_SECRET", "7f92897a59464ddbbf00f06cd6bda7fc")
     # SpamWatch API you can get it from get api from http://t.me/SpamWatchBot?start=token
-    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
+    SPAMWATCH_API = os.environ.get("SPAMWATCH_API", "RcTrglJSXxi6I~5Rr4NLwVOWeVWEzhh7e6MiIqURbhe~3brOGAN4nCSo93bqXSpa")
     # github vars
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     # Deepai value can get from https://deepai.org/
-    DEEP_AI = os.environ.get("DEEP_AI", None)
+    DEEP_AI = os.environ.get("DEEP_AI", "b4b51042-03d5-4ac1-b75b-583dac0549bf")
 
     # DO NOT EDIT BELOW THIS LINE IF YOU DO NOT KNOW WHAT YOU ARE DOING
     # TG API limit. A message can have maximum 4096 characters!
@@ -152,9 +152,6 @@ class Config(object):
         until_date=None, view_messages=None, send_messages=True
     )
     CHROME_BIN = os.environ.get("CHROME_BIN", "/app/.apt/usr/bin/google-chrome")
-    CHROME_DRIVER = os.environ.get(
-        "CHROME_DRIVER", "/app/.chromedriver/bin/chromedriver"
-    )
     # for sed plugin
     GROUP_REG_SED_EX_BOT_S = os.environ.get(
         "GROUP_REG_SED_EX_BOT_S", r"(regex|moku|BananaButler_|rgx|l4mR)bot"
@@ -163,7 +160,7 @@ class Config(object):
     COUNTRY = str(os.environ.get("COUNTRY", ""))
     TZ_NUMBER = int(os.environ.get("TZ_NUMBER", 1))
     # For updater plugin
-    UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "master")
+    UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "main")
     # dont touch this at all
     SUDO_USERS: Set[int] = set()
     CATUBLOGO = None
@@ -171,11 +168,11 @@ class Config(object):
     BOTLOG_CHATID = 0
     # extra plugins realted vars below
     EXTERNAL_REPOBRANCH = os.environ.get("EXTERNAL_REPOBRANCH", "main")
-    BADCAT_REPO = os.environ.get("BADCAT_REPO", "https://github.com/TgCatUB/CatPlugins")
+    BADCAT_REPO = os.environ.get("BADCAT_REPO", "https://github.com/AMBOT-v1/CatPlugins")
     if BADCAT_REPO and not url(BADCAT_REPO):
-        BADCAT_REPO = "https://github.com/TgCatUB/CatPlugins"
+        BADCAT_REPO = "https://github.com/AMBOT-v1/CatPlugins"
     BADCAT_REPOBRANCH = os.environ.get("BADCAT_REPOBRANCH", "badcat")
-    VC_REPO = os.environ.get("VC_REPO", "https://github.com/TgCatUB/CatVCPlayer")
+    VC_REPO = os.environ.get("VC_REPO", "https://github.com/AMBOT-v1/CatVCPlayer")
     VC_REPOBRANCH = os.environ.get("VC_REPOBRANCH", "test")
 
 
