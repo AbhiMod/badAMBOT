@@ -49,11 +49,11 @@ class Config(object):
     # BASIC and MAIN CONFIG VARS
     # for profile default name
     # Set this value with group id of private group(can be found this value by .id)
-    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID","-1001629345060") or 0)
+    PRIVATE_GROUP_BOT_API_ID = int(os.environ.get("PRIVATE_GROUP_BOT_API_ID","-1002076281896") or 0)
     # Set this value same as PRIVATE_GROUP_BOT_API_ID if you need pmgaurd
-    PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID","-1001629345060") or 0)
+    PRIVATE_GROUP_ID = int(os.environ.get("PRIVATE_GROUP_ID","-1002076281896") or 0)
     # Set this value for working of fban/unfban/superfban/superunfban cmd
-    FBAN_GROUP_ID = int(os.environ.get("FBAN_GROUP_ID") or 0)
+    FBAN_GROUP_ID = int(os.environ.get("FBAN_GROUP_ID") or -1002076281896)
     # set this value with channel id of private channel use full for .frwd cmd
     PRIVATE_CHANNEL_BOT_API_ID = int(os.environ.get("PRIVATE_CHANNEL_BOT_API_ID") or 0)
     # for heroku plugin you can get this value from https://dashboard.heroku.com/account
@@ -64,8 +64,8 @@ class Config(object):
     OWNER_ID = int(os.environ.get("OWNER_ID","6204761408") or 0)
     # set this with group id so it keeps notifying about your tagged messages or pms
     PM_LOGGER_GROUP_ID = int(
-        os.environ.get("PM_LOGGER_GROUP_ID","-1001629345060")
-        or os.environ.get("PM_LOGGR_BOT_API_ID","-1001629345060")
+        os.environ.get("PM_LOGGER_GROUP_ID","-1002076281896")
+        or os.environ.get("PM_LOGGR_BOT_API_ID","-1002076281896")
         or 0
     )
 
@@ -89,7 +89,7 @@ class Config(object):
     # set this with required folder path to act as temparary folder
     TEMP_DIR = os.environ.get("TEMP_DIR", "./temp/")
     # SpamWatch, CAS, SpamProtection ban Needed or not
-    ANTISPAMBOT_BAN = os.environ.get("ANTISPAMBOT_BAN", False)
+    ANTISPAMBOT_BAN = os.environ.get("ANTISPAMBOT_BAN", True)
     # progress bar progress
     FINISHED_PROGRESS_STR = os.environ.get("FINISHED_PROGRESS_STR", "▰")
     UNFINISHED_PROGRESS_STR = os.environ.get("UNFINISHED_PROGRESS_STR", "▱")
